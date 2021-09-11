@@ -6,13 +6,19 @@
 
 int print_array_float(float f_array[]);
 	// Print out the list of float values
-	for (int i = 0, i<20 i++){
+    printf("Array of float values:");
+    printf("Float[%d] = %f\n",0,f_array[0])
+	for (int i = 1, i<20 i++){
 		printf("Float[%d] = %f\n", i,f_array[i])
 	}
 
-int print_array_integer(??????);
+int print_array_integer(int i_array[]);
 	// Print out the list of integer values
-
+    printf("Array of integer values:");
+    printf("integer[%d] = %d\n",0,i_array[0])
+	for (int i = 1, i<20 i++){
+		printf("integer[%d] = %d\n", i,i_array[i])
+	}
 float sum_array_float(??????);
 	// Compute the sum of the float values
 
