@@ -13,7 +13,7 @@
 //
 // Functional Prototypes
 
-int print_array_float(f_array);
+int print_array_float(float f_array[]);
 	// Print out the list of float values
 	for (int i = 0, i<20 i++){
 		printf("Float[%d]= %f\n", f_array[i])

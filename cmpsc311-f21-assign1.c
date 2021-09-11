@@ -6,7 +6,7 @@
 //                   assignment page for details.
 //
 //   Author        : WEI LIN WENG
-//   Last Modified : 9/9
+//   Last Modified : 9/11
 //
 
 // Include Files
@@ -14,7 +14,7 @@
 
 // Project Includes
 #include <a1support.h>
-
+#include <a1support.c>
 //
 // Functions
 
@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 	}
 
     //PERSONAL CODE----Printing float number within the array
-	print_array_float(f_array);
+	print_array_float(float f_array[]);
 
 	// Return successfully
 	return(0);
