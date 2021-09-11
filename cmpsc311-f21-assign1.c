@@ -39,7 +39,8 @@ int main(int argc, char *argv[]) {
 		scanf("%f", &f_array[i]);
 	}
 
-    ??????
+    //PERSONAL CODE----Printing float number within the array
+	print_array_float(f_array);
 
 	// Return successfully
 	return(0);
