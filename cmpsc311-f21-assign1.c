@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
     //PERSONAL CODE---Temp comments: Printing float number within the array
 	print_array_float(float f_array[0]);
 
-	
+
 	// Return successfully
 	return(0);
 }

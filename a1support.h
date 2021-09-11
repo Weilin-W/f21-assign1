@@ -19,10 +19,10 @@ int print_array_float(float f_array[]);
 int print_array_integer(int i_array[]);
 	// Print out the list of integer values
 
-float sum_array_float(float sum_array_float);
+float sum_array_float(float f_array[]);
 	// Compute the sum of the float values
 
-int sum_array_integer(int sum_array_integer);
+int sum_array_integer(int i_array[]);
 	// Compute the sum of the integer values
 
 int euclids_algorithm(int gcd);
