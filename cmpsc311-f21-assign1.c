@@ -48,8 +48,11 @@ int main(int argc, char *argv[]) {
 		int i_array[] = round(f_array[i]);
 	}
 	//Printing Integer list
-	print_array_integer(20, int i_array);
-
+	print_array_integer(20, int i_array[]);
+	//Print sum of float
+	sum_array_float(f_array[]);
+	//Print sum of integer
+	sum_array_integer(i_array[]);
 	// Return successfully
 	return(0);
 }
