@@ -39,9 +39,16 @@ int main(int argc, char *argv[]) {
 		scanf("%f", &f_array[i]);
 	}
 
-    //PERSONAL CODE---Temp comments: Printing float number within the array
-	print_array_float(float f_array[0]);
 
+    //PERSONAL CODE---Temp comments: Printing float number within the array
+	print_array_float(20,float f_array[]);
+
+	//Create an second array of 20 integers with rounded i values
+	for (i=0; i<20; i++){
+		int i_array[] = round(f_array[i]);
+	}
+	//Printing Integer list
+	print_array_integer(20, int i_array);
 
 	// Return successfully
 	return(0);
