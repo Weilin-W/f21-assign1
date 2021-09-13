@@ -14,7 +14,7 @@
 #include <math.h>
 // Project Includes
 #include <a1support.h>
-#include <a1support.c>
+
 //
 // Functions
 
@@ -49,15 +49,16 @@ int main(int argc, char *argv[]) {
     }
 
     //Printing float number within the array
-	print_array_float(20,f_array[i]);
-	/*
+	print_array_float(20,f_array);
+	
 	//Create an second array of 20 integers with rounded i values
+	int i_array[20]; 
 	for (i=0; i<20; i++){
-		int i_array[] = round(f_array[i]);
+		i_array[i] = round(f_array[i]);
 	}
 	//Printing Integer list
-	print_array_integer(20, int i_array[]);
-	//Print sum of float
+	print_array_integer(20,i_array);
+	/*//Print sum of float
 	sum_array_float(f_array[]);
 	//Print sum of integer
 	sum_array_integer(i_array[]);*/
