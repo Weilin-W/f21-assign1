@@ -11,7 +11,7 @@
 
 // Include Files
 #include <stdio.h>
-
+#include <math.h>
 // Project Includes
 #include <a1support.h>
 #include <a1support.c>
@@ -38,11 +38,19 @@ int main(int argc, char *argv[]) {
 	for (i=0; i<20; i++) {
 		scanf("%f", &f_array[i]);
 	}
+	//Calculation of float @ if n>=10; n*pi else n * 8.4
+    for (int i=0; i<20; i++){
+        if(f_array[i] >= 10){
+            f_array[i] = f_array[i] * M_PI;
+        }
+        else{
+            f_array[i] = f_array[i] * 8.4;
+        }
+    }
 
-
-    //PERSONAL CODE---Temp comments: Printing float number within the array
-	print_array_float(20,float f_array[]);
-
+    //Printing float number within the array
+	print_array_float(20,f_array[i]);
+	/*
 	//Create an second array of 20 integers with rounded i values
 	for (i=0; i<20; i++){
 		int i_array[] = round(f_array[i]);
@@ -52,7 +60,8 @@ int main(int argc, char *argv[]) {
 	//Print sum of float
 	sum_array_float(f_array[]);
 	//Print sum of integer
-	sum_array_integer(i_array[]);
+	sum_array_integer(i_array[]);*/
+
 	// Return successfully
 	return(0);
 }
