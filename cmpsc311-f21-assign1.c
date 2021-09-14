@@ -77,7 +77,9 @@ int main(int argc, char *argv[]) {
 		printf("The GCD(%d,%d) = %d\n", i_array[i], i_array[i+1], euclids_algorithm(a,b));
 	}
 
-	//selection_sort_float(f_array);
+	//printing selection sort
+	selection_sort_float(f_array);
+	
 	// Return successfully
 	return(0);
 }

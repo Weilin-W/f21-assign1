@@ -51,22 +51,30 @@ int euclids_algorithm(int a, int b){
     }
     return euclids_algorithm(b % a, a);
 }
-/*int selection_sort_float(float f_array[]){
+int selection_sort_float(float f_array[]){
 	// Sort the list of float values
-    float fsorted_array[20];
-    for(int i=0; i<20; i++){
-        for(int j=0; j<20; j++){
-            if(f_array[i]<f_array[j]){
-                fsorted_array[i] = f_array[i];
-            }
-            else{
-                fsorted_array[i] = f_array[j];
+    for(int i=0; i<19; i++){
+        int pos = i;
+        int swap;
+        for(int j=i+1; j<20; j++){
+            if(f_array[j]<f_array[pos]){
+                f_array[pos] = j;
             }
         }
+        if (pos != i){
+            swap = f_array[i];
+            f_array[i] = f_array[pos];
+            f_array[pos] = swap;
+        }
     }
+    printf("Array of Sorted float values:");
+    printf("Float[%d] = %f\n",0,f_array[0]);
+	for (int i=1; i<20; i++){
+		printf("Float[%d] = %f\n", i,f_array[i]);
+	}
     return 0;
 }
-int selection_sort_integer(int i_array[]){
+/*int selection_sort_integer(int i_array[]){
 	// Sort the list of integer values
 }
 
