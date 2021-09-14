@@ -42,6 +42,7 @@ int sum_array_integer(int i_array[]){
         isum += i_array[i];
     }
     printf("The sum of the integer array is : %d", isum);
+    printf("\n");
     return 0;
 }
 int euclids_algorithm(int a, int b){
@@ -51,15 +52,14 @@ int euclids_algorithm(int a, int b){
     }
     return euclids_algorithm(b % a, a);
 }
-int selection_sort_float(float f_array[]){
+int selection_sort_float(int ary_length,float f_array[]){
 	// Sort the list of float values
-    for(int i=0; i<19; i++){
+    for(int i=0; i<ary_length-1; i++){
         int pos = i;
         int swap;
-        for(int j=i+1; j<20; j++){
-            if(f_array[j]<f_array[pos]){
-                f_array[pos] = j;
-            }
+        for(int j=i+1; j<ary_length; j++){
+            if(f_array[j]<f_array[pos])
+                pos = j;
         }
         if (pos != i){
             swap = f_array[i];

@@ -78,8 +78,8 @@ int main(int argc, char *argv[]) {
 	}
 
 	//printing selection sort
-	selection_sort_float(f_array);
-	
+	selection_sort_float(20,f_array);
+
 	// Return successfully
 	return(0);
 }
