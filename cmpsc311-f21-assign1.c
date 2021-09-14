@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 	// NOTE: this is where you will want to add some new variables
 	float f_array[20];
     int i;
-
+	int array_length = 20;
 	// First, lets read in the float numbers to process
 	for (i=0; i<20; i++) {
 		scanf("%f", &f_array[i]);
@@ -69,7 +69,13 @@ int main(int argc, char *argv[]) {
 
 	//Calculating gcd and printing the function of gcd of 2 values
 	//The GCD(64, 8) = 8  Example print out
-
+	int a;
+	int b;
+	for(i=0; i<array_length-1; i++){
+		a = i_array[i];
+		b = i_array[i+1];
+		printf("The GCD(%d,%d) = %d\n", i_array[i], i_array[i+1], euclids_algorithm(a,b));
+	}
 	// Return successfully
 	return(0);
 }

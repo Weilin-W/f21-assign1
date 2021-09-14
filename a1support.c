@@ -44,9 +44,13 @@ int sum_array_integer(int i_array[]){
     printf("The sum of the integer array is : %d", isum);
     return 0;
 }
-int euclids_algorithm(int a, int b);
+int euclids_algorithm(int a, int b){
 	// Euclid's algorithm to calculate the greatest common divisor
-
+    if (a==0){
+        return b;
+    }
+    return euclids_algorithm(b % a, a);
+}
 /*int selection_sort_float(??????);
 	// Sort the list of float values
 
