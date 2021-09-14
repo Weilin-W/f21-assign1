@@ -55,12 +55,6 @@ int euclids_algorithm(int a, int b){
 int selection_sort_float(int ary_length,float f_array[]){
 	// Sort the list of float values
     //For loop to get position of the array
-    
-    //testing values within the array
-    for(int i=0; i<20; i++){
-        printf("testing float: %f\n",f_array[i]);
-    }
-    //testing above
     for(int i=0; i<ary_length-1; i++){
         int pos = i;
         float swap;
