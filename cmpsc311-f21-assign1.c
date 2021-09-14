@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
 
     //Printing float number within the array
 	print_array_float(20,f_array);
-	printf("/n");
+	printf("\n");
 	//Create an second array of 20 integers with rounded i values
 	int i_array[20]; 
 	for (i=0; i<20; i++){
