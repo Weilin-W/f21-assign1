@@ -31,7 +31,7 @@ int euclids_algorithm(int a, int b);
 int selection_sort_float(int ary_length,float f_array[]);
 	// Sort the list of float values
 
-//int selection_sort_integer(int i_array[]);
+int selection_sort_integer(int ary_length,int i_array[]);
 	// Sort the list of integer values
 
 /*int graph_sin(x*multiplier);
