@@ -51,11 +51,25 @@ int euclids_algorithm(int a, int b){
     }
     return euclids_algorithm(b % a, a);
 }
-/*int selection_sort_float(??????);
+/*int selection_sort_float(float f_array[]){
 	// Sort the list of float values
-
-int selection_sort_integer(??????);
+    float fsorted_array[20];
+    for(int i=0; i<20; i++){
+        for(int j=0; j<20; j++){
+            if(f_array[i]<f_array[j]){
+                fsorted_array[i] = f_array[i];
+            }
+            else{
+                fsorted_array[i] = f_array[j];
+            }
+        }
+    }
+    return 0;
+}
+int selection_sort_integer(int i_array[]){
 	// Sort the list of integer values
+}
 
-int graph_sin(??????);
-	// Graph the sin(x*multiplier) function */
+int graph_sin(??????){
+	// Graph the sin(x*multiplier) function
+} */
