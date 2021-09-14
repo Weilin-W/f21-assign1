@@ -54,19 +54,27 @@ int euclids_algorithm(int a, int b){
 }
 int selection_sort_float(int ary_length,float f_array[]){
 	// Sort the list of float values
+    //For loop to get position of the array
     for(int i=0; i<ary_length-1; i++){
         int pos = i;
         int swap;
+        //Search thru the array list and compare the value @ j 
+        //with the value at inital position
+        //position increase by 1
         for(int j=i+1; j<ary_length; j++){
             if(f_array[j]<f_array[pos])
                 pos = j;
         }
+        //if position doen't equal to i
+        //A min found at value of J which is the current position of j
+        //temp value of Swap placed, swap the two values within the array
         if (pos != i){
             swap = f_array[i];
             f_array[i] = f_array[pos];
             f_array[pos] = swap;
         }
     }
+    //printing all values within the sorted array
     printf("Array of Sorted float values:");
     printf("Float[%d] = %f\n",0,f_array[0]);
 	for (int i=1; i<20; i++){
