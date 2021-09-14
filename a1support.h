@@ -34,7 +34,7 @@ int selection_sort_float(int ary_length,float f_array[]);
 int selection_sort_integer(int ary_length,int i_array[]);
 	// Sort the list of integer values
 
-/*int graph_sin(x*multiplier);
+int graph_sin(double multiplier);
 	// Graph the sin(x*multiplier) function*/
 
 #endif // CMPSC311_A1SUPPORT_INCLUDED

@@ -9,9 +9,9 @@
 int print_array_float(int ary_length,float f_array[]){
 	// Print out the list of float values
     printf("Array of float values:");
-    printf("Float[%d] = %f\n",0,f_array[0]);
+    printf("Float[%d] = %.3f\n",0,f_array[0]);
 	for (int i=1; i<20; i++){
-		printf("Float[%d] = %f\n", i,f_array[i]);
+		printf("Float[%d] = %.3f\n", i,f_array[i]);
 	}
     return 0;
 
@@ -55,6 +55,7 @@ int euclids_algorithm(int a, int b){
 int selection_sort_float(int ary_length,float f_array[]){
 	// Sort the list of float values
     //For loop to get position of the array
+    printf(f_array);
     for(int i=0; i<ary_length-1; i++){
         int pos = i;
         int swap;
@@ -88,7 +89,7 @@ int selection_sort_integer(int ary_length,int i_array[]){
     for(int i=0; i<ary_length-1; i++){
         int pos = i;
         int swap;
-        //Search thru the array list and compare the value @ j 
+        //Search thru the array list and compare the value @ j-
         //with the value at inital position
         //position increase by 1
         for(int j=i+1; j<ary_length; j++){
