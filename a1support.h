@@ -25,10 +25,10 @@ float sum_array_float(float f_array[]);
 int sum_array_integer(int i_array[]);
 	// Compute the sum of the integer values
 
-/*int euclids_algorithm(int gcd);
+int euclids_algorithm(int a, int b);
 	// Euclid's algorithm to calculate the greatest common divisor
 
-int selection_sort_float(float f_array[]);
+/*int selection_sort_float(float f_array[]);
 	// Sort the list of float values
 
 int selection_sort_integer(int i_array[]);

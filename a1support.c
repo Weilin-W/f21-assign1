@@ -32,6 +32,7 @@ float sum_array_float(float f_array[]){
         fsum += f_array[i];
     }
     printf("The sum of the float array is : %f", fsum);
+    printf("\n");
     return 0;
 }    
 int sum_array_integer(int i_array[]){
@@ -43,10 +44,10 @@ int sum_array_integer(int i_array[]){
     printf("The sum of the integer array is : %d", isum);
     return 0;
 }
-/*int euclids_algorithm(??????);
+int euclids_algorithm(int a, int b);
 	// Euclid's algorithm to calculate the greatest common divisor
 
-int selection_sort_float(??????);
+/*int selection_sort_float(??????);
 	// Sort the list of float values
 
 int selection_sort_integer(??????);

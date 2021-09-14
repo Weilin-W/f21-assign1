@@ -48,20 +48,27 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    //Printing float number within the array
+    //Printing float number within the array and create a new line
 	print_array_float(20,f_array);
 	printf("\n");
+
 	//Create an second array of 20 integers with rounded i values
+	//Appending f_array in to integer array
 	int i_array[20]; 
 	for (i=0; i<20; i++){
 		i_array[i] = round(f_array[i]);
 	}
 	//Printing Integer list
 	print_array_integer(20,i_array);
-	/*//Print sum of float
-	sum_array_float(f_array[]);
+	printf("\n");
+	//Print sum of float
+	sum_array_float(f_array);
+	
 	//Print sum of integer
-	sum_array_integer(i_array[]);*/
+	sum_array_integer(i_array);
+
+	//Calculating gcd and printing the function of gcd of 2 values
+	//The GCD(64, 8) = 8  Example print out
 
 	// Return successfully
 	return(0);
