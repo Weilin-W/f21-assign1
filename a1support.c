@@ -113,6 +113,14 @@ int selection_sort_integer(int ary_length,int i_array[]){
     return 0;
 }
 
-/*int graph_sin(??????){
+int graph_sin(double multiplier){
 	// Graph the sin(x*multiplier) function
-} */
+    double y_array[][];
+    for (int i=1.5; i>=-1.4; i-=0.1){
+        for(int j=-3.5; j<=3.5; j+=0.1){
+            double y_array[i][j] = 
+        }
+    }
+
+    return 0;
+}
