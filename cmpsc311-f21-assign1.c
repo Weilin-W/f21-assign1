@@ -40,11 +40,11 @@ int main(int argc, char *argv[]) {
 	}
 	//Calculation of float @ if n>=10; n*pi else n * 8.4
     for (int i=0; i<20; i++){
-        if(f_array[i] >= 10){
-            f_array[i] = f_array[i] * M_PI;
+        if(f_array[i] >= 10){//check each values within the array
+            f_array[i] = f_array[i] * M_PI; //calculate the num*pi
         }
         else{
-            f_array[i] = f_array[i] * 8.4;
+            f_array[i] = f_array[i] * 8.4;//calculate the num*8.4
         }
     }
 
@@ -59,10 +59,10 @@ int main(int argc, char *argv[]) {
 	for (i=0; i<20; i++){
 		i_array[i] = f_array[i];
 		if(f_array[i]-i_array[i]>=0.500){ //checks value >=0.5 to meet requirement
-			f2temp_array[i] = f_array[i] + 0.700;
-			i_array[i] = f2temp_array[i];  //rounding float
+			f2temp_array[i] = f_array[i] + 0.700; //rounding float
+			i_array[i] = f2temp_array[i];  //append rounded float
 		}
-		else{//else just appending the f_array
+		else{//else just appending the regular unchanged f_array
 			i_array[i] = f_array[i];
 		}
 		
@@ -81,9 +81,9 @@ int main(int argc, char *argv[]) {
 	//The GCD(64, 8) = 8  Example print out
 	int a;
 	int b;
-	for(i=0; i<array_length-1; i++){
-		a = i_array[i];
-		b = i_array[i+1];
+	for(i=0; i<array_length-1; i++){ //since b is i+1, array_length should be -1
+		a = i_array[i]; //getting a position value of array
+		b = i_array[i+1]; //getting a value ahead of position value
 		printf("The GCD(%d,%d) = %d\n", i_array[i], i_array[i+1], euclids_algorithm(a,b));
 	}
 
