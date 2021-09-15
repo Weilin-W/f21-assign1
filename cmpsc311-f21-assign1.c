@@ -82,7 +82,9 @@ int main(int argc, char *argv[]) {
 
 	//printing selection sort integer values
 	selection_sort_integer(20,i_array);
-	
+
+	//printing the sine graph with multipliers
+	//graph_sin(1.00);
 	// Return successfully
 	return(0);
 }

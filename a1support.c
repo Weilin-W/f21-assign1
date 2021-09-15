@@ -31,7 +31,7 @@ float sum_array_float(float f_array[]){
     for (int i=0; i<20; i++){
         fsum += f_array[i];
     }
-    printf("The sum of the float array is : %f", fsum);
+    printf("The sum of the float array is : %.3f", fsum);
     printf("\n");
     return 0;
 }    
@@ -113,14 +113,22 @@ int selection_sort_integer(int ary_length,int i_array[]){
     return 0;
 }
 
-int graph_sin(double multiplier){
+/*int graph_sin(double multiplier){
 	// Graph the sin(x*multiplier) function
-    double y_array[][];
     for (int i=1.5; i>=-1.4; i-=0.1){
         for(int j=-3.5; j<=3.5; j+=0.1){
-            double y_array[i][j] = 
+            double y = sin(j*multiplier);
+            double y_array[i][j] = double y_array[j] 
         }
     }
-
+    printf("\n");
+    printf("\n");
+    for (int i=-3.5; i<3.5; i+=0.1){
+        double y = sin(i*multiplier);
+        for (int j=1.5; j>=-1.4; j-=0.1){
+            double y_array[i][j] = y;
+            printf("test double array[%d]: %f\n",i,y_array[i][y]);
+        }
+    }
     return 0;
-}
+}*/
