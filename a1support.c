@@ -113,22 +113,33 @@ int selection_sort_integer(int ary_length,int i_array[]){
     return 0;
 }
 
-/*int graph_sin(double multiplier){
+int graph_sin(double multiplier){
 	// Graph the sin(x*multiplier) function
-    for (int i=1.5; i>=-1.4; i-=0.1){
+    //Scan thru the horizontal as i would be printing line down
+    //j is the all value of print within each i line
+    //Make comparison to sin value of the graph
+    printf("\n");
+    printf("\n");
+    double y_array[70];
+    for(int x=-3.5; x<=3.5; x+=0.1){
+        double y = sin(x*multiplier);
+        y_array[x] = y;
+        printf(y_array[x]);
+    }
+    /*for (int i=1.5; i>=-1.4; i-=0.1){
         for(int j=-3.5; j<=3.5; j+=0.1){
             double y = sin(j*multiplier);
             double y_array[i][j] = double y_array[j] 
         }
     }
-    printf("\n");
-    printf("\n");
+    
+    /////////// forget this/////////////////////////////
     for (int i=-3.5; i<3.5; i+=0.1){
         double y = sin(i*multiplier);
         for (int j=1.5; j>=-1.4; j-=0.1){
             double y_array[i][j] = y;
             printf("test double array[%d]: %f\n",i,y_array[i][y]);
         }
-    }
+    }*/
     return 0;
-}*/
+}
