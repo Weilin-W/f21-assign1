@@ -55,8 +55,18 @@ int main(int argc, char *argv[]) {
 	//Create an second array of 20 integers with rounded i values
 	//Appending f_array in to integer array
 	int i_array[20]; 
+	float f2temp_array[20]; //temp array for rounding floats
 	for (i=0; i<20; i++){
-		i_array[i] = round(f_array[i]);
+		i_array[i] = f_array[i];
+		if(f_array[i]-i_array[i]>=0.500){ //checks value >=0.5 to meet requirement
+			f2temp_array[i] = f_array[i] + 0.700;
+			i_array[i] = f2temp_array[i];  //rounding float
+		}
+		else{//else just appending the f_array
+			i_array[i] = f_array[i];
+		}
+		
+		//i_array[i] = f_array[i];  //round the float to int
 	}
 	//Printing Integer list
 	print_array_integer(20,i_array);
@@ -84,7 +94,7 @@ int main(int argc, char *argv[]) {
 	selection_sort_integer(20,i_array);
 
 	//printing the sine graph with multipliers
-	graph_sin(1.00);
+	//graph_sin(1.00);
 	// Return successfully
 	return(0);
 }
