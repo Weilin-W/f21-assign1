@@ -113,7 +113,7 @@ int selection_sort_integer(int ary_length,int i_array[]){
     return 0;
 }
 
-/*int graph_sin(double multiplier){
+int graph_sin(double multiplier){
 	// Graph the sin(x*multiplier) function
     //Scan thru the horizontal as i would be printing line down
     //j is the all value of print within each i line
@@ -121,28 +121,29 @@ int selection_sort_integer(int ary_length,int i_array[]){
     printf("\n");
     printf("\n");
     double y_array[70];
-    for(int x=-3.5; x<=3.5; x+=0.1){
+    /*for(int x=-3.5; x<=3.5; x+=0.1){
         double y = sin(x*multiplier);
         y_array[x] = y;
-        printf(y_array[x]);
-    }
+        printf("%f",y_array[x]);
+    }*/
     for (int i=1.5; i>=-1.4; i-=0.1){
+        printf("%d |",i);
         for(int j=-3.5; j<=3.5; j+=0.1){
-            double y = sin(j*multiplier)
-            if(i == y){
+            double y = sin(j*multiplier);
+            if(i == y+0.1 && y<){ //error
                 printf("*");
             }
             else{
                 printf(" ");
             }
-            double y = sin(j*multiplier);
-            double y_array[i][j] = double y_array[j] 
+            //double y = sin(j*multiplier);
+            //double y_array[i][j] = y_array[j];
         }
     }
-    for (int label=-3.5; i<=3.5; label+=0.1){
-        printf("-);
+    for (int label=-3.5; label<=3.5; label+=0.1){
+        printf("-");
     }
-    for (int xAxis=-3.5; i<=3.5; xAxis+=0.1){
+    for (int xAxis=-3.5; xAxis<=3.5; xAxis+=0.1){
         if(xAxis==-3||xAxis ==-2||xAxis==-1||xAxis==0||xAxis==1||xAxis==2||xAxis==3){
             printf("%d",xAxis);
         }
@@ -150,6 +151,7 @@ int selection_sort_integer(int ary_length,int i_array[]){
             printf(" ");
         }
     }
+    /*
     /////////// forget this/////////////////////////////
     for (int i=-3.5; i<3.5; i+=0.1){
         double y = sin(i*multiplier);
@@ -157,6 +159,6 @@ int selection_sort_integer(int ary_length,int i_array[]){
             double y_array[i][j] = y;
             printf("test double array[%d]: %f\n",i,y_array[i][y]);
         }
-    }
+    }*/
     return 0;
-}*/
+}
