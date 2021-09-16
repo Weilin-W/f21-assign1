@@ -126,7 +126,7 @@ int graph_sin(double multiplier){
         y_array[x] = y;
         printf("%f",y_array[x]);
     }*/
-    printf("      |     |     |     |   Graph of y=sin(x*%f)",multiplier);
+    printf("|     |     |     |     |     |     |Graph of y=sin(x*%.2f)\n",multiplier);
     for (double i=1.5; i>=-1.5; i-=0.1){
         if(i>0){
             printf(" %.1f |", i);
