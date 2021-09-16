@@ -128,11 +128,28 @@ int selection_sort_integer(int ary_length,int i_array[]){
     }
     for (int i=1.5; i>=-1.4; i-=0.1){
         for(int j=-3.5; j<=3.5; j+=0.1){
+            double y = sin(j*multiplier)
+            if(i == y){
+                printf("*");
+            }
+            else{
+                printf(" ");
+            }
             double y = sin(j*multiplier);
             double y_array[i][j] = double y_array[j] 
         }
     }
-    
+    for (int label=-3.5; i<=3.5; label+=0.1){
+        printf("-);
+    }
+    for (int xAxis=-3.5; i<=3.5; xAxis+=0.1){
+        if(xAxis==-3||xAxis ==-2||xAxis==-1||xAxis==0||xAxis==1||xAxis==2||xAxis==3){
+            printf("%d",xAxis);
+        }
+        else{
+            printf(" ");
+        }
+    }
     /////////// forget this/////////////////////////////
     for (int i=-3.5; i<3.5; i+=0.1){
         double y = sin(i*multiplier);
