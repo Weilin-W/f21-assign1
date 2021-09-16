@@ -137,6 +137,9 @@ int graph_sin(double multiplier){
         else{
             printf("      "); //spacing for ------- line
         }
+        if(i == -1.6){
+            printf("-");
+        }
         for(double j=-3.5; j<=3.5; j+=0.1){
             double y = sin(j*multiplier);
             //double rValue;
@@ -150,13 +153,10 @@ int graph_sin(double multiplier){
             else{
                 printf(" ");
             }
-            if(i == -1.6){
-                printf("-");
-            }
-            else if((i == -1.7) && ((j ==-3)||(j==-2)||(j==-1)||(j==0)||(j==1)||(j==2)||(j==3))){
+            /*
+            if((i == -1.7) && ((j ==-3)||(j==-2)||(j==-1)||(j==0)||(j==1)||(j==2)||(j==3))){
                 printf("%.1f", j);
             }
-            /*
             if(i == y){ //error
                 printf("*");
             }
