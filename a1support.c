@@ -126,7 +126,8 @@ int graph_sin(double multiplier){
         y_array[x] = y;
         printf("%f",y_array[x]);
     }*/
-    int y_value;
+    double y_value;
+    double i_value;
     printf("|     |     |     |     |     |     |Graph of y=sin(x*%.2f)\n",multiplier);
     for (double i=1.5; i>=-1.5; i-=0.1){ //1.6 help print last one line
         if(i>0 && i>=-1.5){
@@ -147,13 +148,18 @@ int graph_sin(double multiplier){
             else{
                 y_value = (int)y+0.5;
             }
-            printf("%d",y_value);
-
-            if(i == y_value){ //error
+            if(i<0){
+                i_value = (int)i-0.5;
+            }
+            else{
+                i_value = (int)i+0.5;
+            }
+            //prinf("%f",y_value);
+            if(y_value == i_value){ //error
                 printf("*");
             }
             else{
-                printf(" ");
+                printf("&");
             }
             /*
             if((i == -1.7) && ((j ==-3)||(j==-2)||(j==-1)||(j==0)||(j==1)||(j==2)||(j==3))){
