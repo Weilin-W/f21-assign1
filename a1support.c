@@ -151,6 +151,6 @@ int graph_sin(double multiplier){
     }
     //Printing X-axis labels
     printf("      -----------------------------------------------------------------------\n");
-    printf("          -3        -2        -1         0         1         2         3");
+    printf("          -3        -2        -1         0         1         2         3\n");
     return 0;
 }
