@@ -8,10 +8,11 @@
 
 int print_array_float(int ary_length,float f_array[]){
 	// Print out the list of float values
+    // Print and round to .000 points
     printf("Array of float values:");
-    printf("Float[%d] = %.3f\n",0,f_array[0]);
+    printf("Float[%d] = %.3f\n",0,f_array[0]); //Print position 0 array value
 	for (int i=1; i<20; i++){
-		printf("Float[%d] = %.3f\n", i,f_array[i]);
+		printf("Float[%d] = %.3f\n", i,f_array[i]); //Print rest of array
 	}
     return 0;
 
@@ -19,14 +20,15 @@ int print_array_float(int ary_length,float f_array[]){
 int print_array_integer(int ary_length,int i_array[]){
 	// Print out the list of integer values
     printf("Array of integer values:");
-    printf("integer[%d] = %d\n",0,i_array[0]);
+    printf("integer[%d] = %d\n",0,i_array[0]); //Print position 0 array value
 	for (int i=1; i<ary_length; i++){
-		printf("integer[%d] = %d\n", i,i_array[i]);
+		printf("integer[%d] = %d\n", i,i_array[i]); //Print rest of array
 	}
     return 0;
 }
 float sum_array_float(float f_array[]){
 	// Compute the sum of the float values
+    // Adds every value within the array and stores in fsum
     float fsum = 0.0;
     for (int i=0; i<20; i++){
         fsum += f_array[i];
@@ -37,6 +39,7 @@ float sum_array_float(float f_array[]){
 }    
 int sum_array_integer(int i_array[]){
 	// Compute the sum of the integer values
+    // Adds every value within the array and stores in isum
     int isum = 0;
     for (int i=0; i<20; i++){
         isum += i_array[i];
@@ -47,9 +50,12 @@ int sum_array_integer(int i_array[]){
 }
 int euclids_algorithm(int a, int b){
 	// Euclid's algorithm to calculate the greatest common divisor
+    //Ex. gcd(0,3) = 3; 3 itself is the largest value
     if (a==0){
         return b;
     }
+    //re-do the function until int a == 0
+    //Ex: gcd(5,35) = 5; 35%5 = 0 = a, which will return 5 = b
     return euclids_algorithm(b % a, a);
 }
 int selection_sort_float(int ary_length,float f_array[]){
@@ -75,6 +81,7 @@ int selection_sort_float(int ary_length,float f_array[]){
         }
     }
     //printing all values within the sorted array
+    //Same as the print_array_float ref. line 9
     printf("Array of Sorted float values:");
     printf("Float[%d] = %.3f\n",0,f_array[0]);
 	for (int i=1; i<20; i++){
@@ -85,6 +92,7 @@ int selection_sort_float(int ary_length,float f_array[]){
 int selection_sort_integer(int ary_length,int i_array[]){
 	// Sort the list of integer values
     //For loop to get position of the array
+    //Same logic as to selection_sort_float ref. line 61
     for(int i=0; i<ary_length-1; i++){
         int pos = i;
         int swap;
@@ -105,6 +113,7 @@ int selection_sort_integer(int ary_length,int i_array[]){
         }
     }
     //printing all values within the sorted array
+    //Same as print_array_integer ref. line 20
     printf("Array of sorted integer values:");
     printf("integer[%d] = %d\n",0,i_array[0]);
 	for (int i=1; i<ary_length; i++){
@@ -120,59 +129,28 @@ int graph_sin(double multiplier){
     //Make comparison to sin value of the graph
     printf("\n");
     printf("\n");
-    //double y_array[70];
-    /*for(int x=-3.5; x<=3.5; x+=0.1){
-        double y = sin(x*multiplier);
-        y_array[x] = y;
-        printf("%f",y_array[x]);
-    }*/
-    //double y_value;
-    //double i_value;
-    printf("|     |     |     |     |     |     |Graph of y=sin(x*%.2f)\n",multiplier);
-    for (double i=1.5; i>=-1.5; i-=0.1){ //1.6 help print last one line
+    //Graph Title Labels
+    printf("   |     |     |     |     |     |     Graph of y=sin(x*%.2f)\n",multiplier);
+    for (double i=1.5; i>=-1.5; i-=0.1){ //help print Y-axis
         if(i>0 && i>=-1.5){
-            printf(" %.1f | ", i);
+            printf(" %.1f | ", i); //Y-axis spacing for positive #
         }
-        else if(i <= 0 && i>=-1.5){
+        else if(i <= 0 && i>=-1.5){ //Y-axis spacing for negative #
             printf("%.1f | ",i);
         }
-        //else{
-            //printf("      "); //spacing for ------- line
-        //}
-        for(double j=-3.5; j<=3.6; j+=0.1){
-            double y = sin(j*multiplier);
-            //printf("Current Value of i: %f\n",i_value);
-            if(i<y+0.0505 && i>y-0.0505){ //error
+        for(double j=-3.5; j<=3.6; j+=0.1){//x-axis positions to print horizontally
+            double y = sin(j*multiplier); //Calculate Sine values
+            if(i<y+0.0505 && i>y-0.0505){ //Replace rounding Comparison
                 printf("*");
             }
             else{
                 printf(" ");
             }
-            /*
-            if((i == -1.7) && ((j ==-3)||(j==-2)||(j==-1)||(j==0)||(j==1)||(j==2)||(j==3))){
-                printf("%.1f", j);
-            }
-            if(i == y){ //error
-                printf("*");
-            }
-            else{
-                printf("*");
-            }*/
-            //double y = sin(j*multiplier);
-            //double y_array[i][j] = y_array[j];
         }
         printf("\n");
     }
-    /*for (int label=-3.5; label<=3.5; label+=0.1){
-        printf("-");
-    }
-    for (int xAxis=-3.5; xAxis<=3.5; xAxis+=0.1){
-        if(xAxis==-3||xAxis ==-2||xAxis==-1||xAxis==0||xAxis==1||xAxis==2||xAxis==3){
-            printf("%d",xAxis);
-        }
-        else{
-            printf(" ");
-        }
-    }*/
+    //Printing X-axis labels
+    printf("      -----------------------------------------------------------------------\n");
+    printf("          -3        -2        -1         0         1         2         3");
     return 0;
 }

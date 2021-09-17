@@ -95,6 +95,9 @@ int main(int argc, char *argv[]) {
 
 	//printing the sine graph with multipliers
 	graph_sin(1.00);
+	graph_sin(1.50);
+	graph_sin(2.00);
+	graph_sin(3.00);
 	// Return successfully
 	return(0);
 }
