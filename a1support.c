@@ -131,18 +131,18 @@ int graph_sin(double multiplier){
     printf("|     |     |     |     |     |     |Graph of y=sin(x*%.2f)\n",multiplier);
     for (double i=1.5; i>=-1.5; i-=0.1){ //1.6 help print last one line
         if(i>0 && i>=-1.5){
-            printf(" %.1f |", i);
+            printf(" %.1f | ", i);
         }
         else if(i <= 0 && i>=-1.5){
-            printf("%.1f |",i);
+            printf("%.1f | ",i);
         }
         //else{
             //printf("      "); //spacing for ------- line
         //}
-        for(double j=-3.5; j<=3.5; j+=0.1){
+        for(double j=-3.5; j<=3.6; j+=0.1){
             double y = sin(j*multiplier);
             //printf("Current Value of i: %f\n",i_value);
-            if(i<y+0.0555 && i>y-0.0555){ //error
+            if(i<y+0.0505 && i>y-0.0505){ //error
                 printf("*");
             }
             else{
